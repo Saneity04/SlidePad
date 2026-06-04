@@ -1,0 +1,88 @@
+{
+    "manufacturer": "Saneity04",
+    "keyboard_name": "RP2040 Slidepad",
+    "maintainer": "Saneity04",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "nkro": true,
+        "extrakey": true,
+        "rgb_matrix": true
+    },
+    "matrix_pins": {
+        "rows": ["GP22", "GP21", "GP20", "NO_PIN"],
+        "cols": ["GP23", "GP24", "GP25", "NO_PIN"]
+    },
+    "dip_switch": {"pins": ["GP6","GP7","GP8","GP9"]
+    },
+    "processor": "RP2040",
+    "url": "https://github.com/Saneity04",
+    "usb": {
+        "device_version": "1.2.0",
+        "pid": "0x5350",
+        "vid": "0x1209"
+    },
+    "rgb_matrix": {
+        "animations": {
+            "breathing": true,
+            "cycle_all": true,
+            "cycle_pinwheel": true,
+            "dual_beacon": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "solid_reactive_simple": true,
+            "solid_reactive_wide": true
+        },
+        "default": {
+            "hue": 190,
+            "speed": 32,
+            "animation": "cycle_pinwheel",
+            "val": 128
+        },
+        "driver": "ws2812",
+        "layout": [ 
+            {"matrix": [0,0], "x": 0,   "y": 0,  "flags": 4},
+            {"matrix": [0,1], "x": 112, "y": 0,  "flags": 4},
+            {"matrix": [0,2], "x": 224, "y": 0,  "flags": 4},
+
+            {"matrix": [1,2], "x": 224, "y": 32, "flags": 4},
+            {"matrix": [1,1], "x": 112, "y": 32, "flags": 4},
+            {"matrix": [1,0], "x": 0,   "y": 32, "flags": 4},
+            
+            {"matrix": [2,0], "x": 0,   "y": 64, "flags": 4},
+            {"matrix": [2,1], "x": 112, "y": 64, "flags": 4},
+            {"matrix": [2,2], "x": 224, "y": 64, "flags": 4}
+        ]
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP19"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [0, 1], "x": 1, "y": 0},
+                {"matrix": [0, 2], "x": 2, "y": 0},
+                {"matrix": [0, 3], "x": 3, "y": 0},
+
+                {"matrix": [1, 0], "x": 0, "y": 1},
+                {"matrix": [1, 1], "x": 1, "y": 1},
+                {"matrix": [1, 2], "x": 2, "y": 1},
+                {"matrix": [1, 3], "x": 3, "y": 1},
+
+                {"matrix": [2, 0], "x": 0, "y": 2},
+                {"matrix": [2, 1], "x": 1, "y": 2},
+                {"matrix": [2, 2], "x": 2, "y": 2},  
+                {"matrix": [2, 3], "x": 3, "y": 2},
+
+                {"matrix": [3, 0], "x": 0, "y": 3},
+                {"matrix": [3, 1], "x": 1, "y": 3},
+                {"matrix": [3, 2], "x": 2, "y": 3},  
+                {"matrix": [3, 3], "x": 3, "y": 3}
+
+            ]
+        }
+    }
+}

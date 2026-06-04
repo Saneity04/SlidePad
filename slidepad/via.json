@@ -1,0 +1,66 @@
+{
+    "name": "Slidepad",
+    "productId": "0x5350",
+    "vendorId": "0x1209",
+    "matrix": {
+        "rows": 4,
+        "cols": 4
+    },
+    "menus": [
+    {
+        "label": "Lighting",
+        "content": [
+        {
+            "label": "Backlight",
+            "content": [
+            {
+                "label": "Brightness",
+                "type": "range",
+                "options": [0, 255],
+                "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+                "label": "Effect",
+                "type": "dropdown",
+                "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+                "options": [
+                                "All Off",
+                                "Solid Color",
+                                "Breathing",
+                                "Cycle All",
+                                "Cycle Pinwheel",
+                                "Dual Beacon",
+                                "Raindrops",
+                                "Jellybean Raindrops",
+                                "Hue Breathing",
+                                "Solid Reactive Simple",
+                                "Solid Reactive Wide"
+                            ]
+            },
+            {
+                "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+                "label": "Effect Speed",
+                "type": "range",
+                "options": [0, 255],
+                "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+                "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32",
+                "label": "Color",
+                "type": "color",
+                "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+            ]
+        }
+        ]
+    }
+    ],
+    "layouts": {
+        "keymap": [
+            ["0,0","0,1","0,2","\n\n\n\n\n\n\n\n\ne0","\n\n\n\n\n\n\n\n\ne1"],
+            ["1,0","1,1","1,2","\n\n\n\n\n\n\n\n\ne2"],
+            ["2,0","2,1","2,2","\n\n\n\n\n\n\n\n\ne3"]
+
+        ]
+    }
+}
