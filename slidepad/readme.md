@@ -4,7 +4,7 @@
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [Muhammad Firdaus](https://github.com/Saneity04)
+* Keyboard Maintainer: [Saneity04](https://github.com/Saneity04)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 
